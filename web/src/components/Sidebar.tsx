@@ -1,3 +1,5 @@
+import { PencilLine } from '@phosphor-icons/react';
+
 export function Sidebar() {
     return (
         <aside className="bg-gray-800 rounded-lg overflow-hidden">
@@ -20,7 +22,8 @@ export function Sidebar() {
             </div>
 
             <footer className="border-t border-t-gray-600 mt-6 pt-6 px-8 pb-8">
-                <a href="#" className="flex items-center justify-center h-12 px-6 font-bold block bg-transparent text-green-500 border border-green-500 rounded-lg">
+                <a href="#" className="flex items-center justify-center h-12 px-6 font-bold block bg-transparent text-green-500 border border-green-500 rounded-lg gap-2 hover:bg-green-500 hover:text-white transition-colors duration-100">
+                    <PencilLine size={20}/>
                     Editar seu perfil
                 </a>
             </footer>

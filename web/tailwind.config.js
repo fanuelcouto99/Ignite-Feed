@@ -22,6 +22,9 @@ export default {
         green: {
           500: '#00875f'
         }
+      },
+      gridTemplateColumns: {
+        '2': '256px 1fr' 
       }
     },
   },

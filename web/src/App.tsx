@@ -1,4 +1,5 @@
 import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar';
 import './styles/global.css';
 
 function App() {
@@ -7,9 +8,7 @@ function App() {
       <Header />
 
       <div className='max-w-6xl my-8 mx-auto px-4 grid grid-cols-2 gap-8 items-start'>
-        <aside>
-          sidebar
-        </aside>
+        <Sidebar />
 
         <main>
           teste

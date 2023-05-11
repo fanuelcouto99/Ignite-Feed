@@ -33,14 +33,21 @@ export function Post() {
                 </p>
             </div>
 
-            <form className="">
-                <strong>
+            <form className="w-full mt-6 pt-6 border-t border-t-gray-600">
+                <strong className="leading-6 text-gray-100">
                     Deixe seu feedback
                 </strong>
 
-                <textarea placeholder="Deixe um comentário"/>
+                <textarea
+                    placeholder="Deixe um comentário"
+                    className="w-full h-24 p-4 rounded-lg bg-gray-900 border-none resize-none text-gray-100 leading-4 mt-4"
+                />
 
-                <button type="submit">Comentar</button>
+                <button
+                    type="submit"
+                    className="py-4 px-6 mt-4 rounded-lg border-none bg-green-500 text-white font-bold cursor-pointer hover:bg-green-300 transition-colors duration-100">
+                    Comentar
+                </button>
             </form>
         </article>
     );

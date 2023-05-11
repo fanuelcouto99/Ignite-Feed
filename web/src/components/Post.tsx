@@ -32,6 +32,16 @@ export function Post() {
                     <a href="#" className="font-bold text-green-500 hover:text-green-300">#rocketseat</a>
                 </p>
             </div>
+
+            <form className="">
+                <strong>
+                    Deixe seu feedback
+                </strong>
+
+                <textarea placeholder="Deixe um comentário"/>
+
+                <button type="submit">Comentar</button>
+            </form>
         </article>
     );
 };

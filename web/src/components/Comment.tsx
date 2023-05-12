@@ -36,10 +36,10 @@ export function Comment() {
                     </p>
                 </div>
 
-                <footer className="mt-4">
-                    <button className="text-gray-400 flex items-center">
-                        <ThumbsUp />
-                        Aplaudir <span>20</span>
+                <footer className="mt-4 rounded-sm">
+                    <button className="text-gray-400 flex items-center hover:text-green-300">
+                        <ThumbsUp className="mr-2"/>
+                        Aplaudir <span className="before:px-1 before:content-['\2022']">20</span>
                     </button>
                 </footer>
             </div>

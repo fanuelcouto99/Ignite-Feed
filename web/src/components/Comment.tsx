@@ -2,36 +2,43 @@ import { ThumbsUp, Trash } from "@phosphor-icons/react";
 
 export function Comment() {
     return (
-        <div className="">
+        <div className="mt-6 flex gap-4">
             <img
                 src="https://github.com/trajano177.png"
-                className=""
+                className="w-12 h-12 rounded-lg"
             />
 
-            <div className="">
-                <div className="">
-                    <header className="">
-                        <div className="">
-                            <strong>Matheus Trajano</strong>
-                            <time title='11 de Maio ás 12:25h' dateTime='2023-05-11 12:25:00' className="text-sm text-gray-400">
+            <div className="flex-1">
+                <div className="bg-gray-700 rounded-lg p-4">
+                    <header className="flex items-start justify-between">
+                        <div>
+                            <strong className="block text-sm leading-6">
+                                Matheus Trajano
+                            </strong>
+                            <time
+                                title='11 de Maio ás 12:25h'
+                                dateTime='2023-05-11 12:25:00'
+                                className="block text-xs leading-6 text-gray-400">
                                 Cerca de 1h atrás
                             </time>
                         </div>
 
                         <button
-                            className=""
+                            className="text-gray-400 rounded-sm hover:text-red-500"
                             title="Deletar comentário"
                         >
-                            <Trash size={20} />
+                            <Trash size={24} />
                         </button>
                     </header>
 
-                    <p>Muito bom Fanuel, parabéns!!! 👏👏</p>
+                    <p className="mt-4 text-gray-300">
+                        Muito bom Fanuel, parabéns!!! 👏👏
+                    </p>
                 </div>
 
-                <footer className="">
-                    <button>
-                        <ThumbsUp size={20}/>
+                <footer className="mt-4">
+                    <button className="text-gray-400 flex items-center">
+                        <ThumbsUp />
                         Aplaudir <span>20</span>
                     </button>
                 </footer>

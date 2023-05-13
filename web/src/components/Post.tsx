@@ -6,7 +6,7 @@ export function Post() {
         <article className="post bg-gray-800 rounded-lg p-10">
             <header className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                    <Avatar hasBorder={true} src="https://github.com/fanuelcouto99.png"/>
+                    <Avatar src="https://github.com/fanuelcouto99.png"/>
 
                     <div className="flex flex-col">
                         <strong className="text-gray-100 leading-6">

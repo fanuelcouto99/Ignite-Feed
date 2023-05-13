@@ -1,6 +1,12 @@
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
 
+interface AuthorProps {
+    avatarUrl: string;
+    name: string;
+    officer: string;
+};
+
 export function Post() {
     return (
         <article className="post bg-gray-800 rounded-lg p-10">

@@ -8,7 +8,7 @@ function App() {
     <div>
       <Header />
 
-      <div className='max-w-6xl my-8 mx-auto px-4 grid grid-cols-2 gap-8 items-start'>
+      <div className='max-w-6xl my-8 mx-auto px-4 grid grid-cols-2 gap-8 items-start max-md:grid-cols-1'>
         <Sidebar />
 
         <main>

@@ -4,7 +4,7 @@ import { Comment } from "./Comment";
 interface AuthorProps {
     avatarUrl: string;
     name: string;
-    officer: string;
+    office: string;
 };
 
 export function Post() {

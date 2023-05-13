@@ -4,7 +4,7 @@ import { Avatar } from "./Avatar";
 export function Comment() {
     return (
         <div className="mt-6 flex gap-4">
-            <Avatar src="https://github.com/trajano177.png" />
+            <Avatar hasBorder={false} src="https://github.com/trajano177.png" />
 
             <div className="flex-1">
                 <div className="bg-gray-700 rounded-lg p-4">

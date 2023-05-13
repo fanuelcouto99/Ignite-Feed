@@ -1,4 +1,5 @@
 import { PencilLine } from '@phosphor-icons/react';
+import { Avatar } from './Avatar';
 
 export function Sidebar() {
     return (
@@ -9,10 +10,7 @@ export function Sidebar() {
             />
 
             <div className="flex flex-col items-center mt-[calc(0px-1.5rem-6px)]">
-                <img
-                    src="https://github.com/fanuelcouto99.png"
-                    className="w-[calc(3rem+12px)] h-[calc(3rem+12px)] rounded-lg border-4 border-gray-800 outline outline-2 outline-green-500"
-                />
+                <Avatar src="https://github.com/fanuelcouto99.png"/>
                 <strong className="mt-4 text-gray-100 leading-6">
                     Fanuel Couto
                 </strong>

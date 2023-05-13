@@ -1,3 +1,4 @@
+import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
 
 export function Post() {
@@ -5,10 +6,8 @@ export function Post() {
         <article className="post bg-gray-800 rounded-lg p-10">
             <header className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                    <img
-                        src="https://github.com/fanuelcouto99.png"
-                        className="w-[calc(3rem+12px)] h-[calc(3rem+12px)] rounded-lg border-4 border-gray-800 outline outline-2 outline-green-500"
-                    />
+                    <Avatar src="https://github.com/fanuelcouto99.png"/>
+
                     <div className="flex flex-col">
                         <strong className="text-gray-100 leading-6">
                             Fanuel Couto

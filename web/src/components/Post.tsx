@@ -2,33 +2,31 @@ import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
 
 interface PostProps {
-    author: AuthorProps;
-    publisedAt: Date;
+    author: {
+        avatarUrl: string;
+        name: string;
+        office: string;
+    };
     content: {
         type: string,
         content: string
-    };
+    }[];
+    publisedAt: Date;
 };
 
-interface AuthorProps {
-    avatarUrl: string;
-    name: string;
-    office: string;
-};
-
-export function Post() {
+export function Post({ author, content, publisedAt }: PostProps) {
     return (
         <article className="post bg-gray-800 rounded-lg p-10">
             <header className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                    <Avatar src="https://github.com/fanuelcouto99.png"/>
+                    <Avatar src={author.avatarUrl} />
 
                     <div className="flex flex-col">
                         <strong className="text-gray-100 leading-6">
-                            Fanuel Couto
+                            {author.name}
                         </strong>
                         <span className="text-sm text-gray-400 leading-6">
-                            Web Developer
+                            {author.office}
                         </span>
                     </div>
                 </div>

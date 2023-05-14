@@ -3,7 +3,7 @@ import { Post } from './components/Post';
 import { Sidebar } from './components/Sidebar';
 import './styles/global.css';
 
-const post = [
+const posts = [
   {
     id: 1,
     author: {
@@ -49,8 +49,16 @@ function App() {
         <Sidebar />
 
         <main>
-          <Post />
-          <Post />
+          {posts.map(post => {
+            return (
+              <Post
+                key={post.id}
+                author={post.author}
+                content={post.content}
+                publisedAt={post.publisedAt}
+              />
+            )
+          })}
         </main>
       </div>
     </div>

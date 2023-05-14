@@ -1,3 +1,5 @@
+import { format, formatDistanceToNow } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
 
@@ -15,6 +17,10 @@ interface PostProps {
 };
 
 export function Post({ author, content, publisedAt }: PostProps) {
+
+    const publishedDateFormatted = format(publisedAt, "dd 'de' LLLL 'às' HH:mm'h'", { locale: ptBR });
+    const publishedDateRelativeToNow = formatDistanceToNow(publisedAt, { locale: ptBR, addSuffix: true });
+
     return (
         <article className="post bg-gray-800 rounded-lg p-10">
             <header className="flex items-center justify-between">
@@ -31,8 +37,8 @@ export function Post({ author, content, publisedAt }: PostProps) {
                     </div>
                 </div>
 
-                <time title='10 de Maio ás 21:31h' dateTime='2023-05-10 21:31:00' className="text-sm text-gray-400">
-                    Publicado há 1h
+                <time title={publishedDateFormatted} dateTime={publisedAt.toISOString()} className="text-sm text-gray-400">
+                    {publishedDateRelativeToNow}
                 </time>
             </header>
 

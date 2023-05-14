@@ -1,6 +1,15 @@
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
 
+interface PostProps {
+    author: AuthorProps;
+    publisedAt: Date;
+    content: {
+        type: string,
+        content: string
+    };
+};
+
 interface AuthorProps {
     avatarUrl: string;
     name: string;

@@ -16,6 +16,10 @@ interface PostProps {
     publisedAt: Date;
 };
 
+const comments = [
+    1,2
+];
+
 export function Post({ author, content, publisedAt }: PostProps) {
 
     const publishedDateFormatted = format(publisedAt, "dd 'de' LLLL 'às' HH:mm'h'", { locale: ptBR });
@@ -82,9 +86,11 @@ export function Post({ author, content, publisedAt }: PostProps) {
             </form>
 
             <div className="mt-8">
-                <Comment />
-                <Comment />
-                <Comment />
+                {comments.map((comment, index) => {
+                    return (
+                        <Comment key={index}/>
+                    )
+                })}
             </div>
         </article>
     );

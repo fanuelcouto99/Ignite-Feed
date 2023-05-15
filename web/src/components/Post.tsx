@@ -43,14 +43,23 @@ export function Post({ author, content, publisedAt }: PostProps) {
             </header>
 
             <div className="leading-8 text-gray-300 mt-6">
-                <p className="mt-4">Fala galeraa 👋 </p>
-                <p className="mt-4">Acabei  de subir mais um projeto no meu portifólio. É um projeto que fiz no Ignite, evento da RocketSeat. o nome do projeto é Ignite Feed! 🚀</p>
-                <p className="mt-4"><a href="#" className="font-bold text-green-500 hover:text-green-300">github.com/fanuelcouto99</a></p>
-                <p className="mt-4">
-                    <a href="#" className="font-bold text-green-500 hover:text-green-300">#novoprojeto</a>{' '}
-                    <a href="#" className="font-bold text-green-500 hover:text-green-300">#ignite</a>{' '}
-                    <a href="#" className="font-bold text-green-500 hover:text-green-300">#rocketseat</a>
-                </p>
+                {content.map((line, index) => {
+                    if (line.type === 'paragraph') {
+                        return (
+                            <p className="mt-4" key={index}>
+                                {line.content}
+                            </p>
+                        )
+                    } else if (line.type === 'link') {
+                        return (
+                            <p className="mt-4" key={index}>
+                                <a href="#" className="font-bold text-green-500 hover:text-green-300">
+                                    {line.content}
+                                </a>
+                            </p>
+                        )
+                    }
+                })}
             </div>
 
             <form className="w-full mt-6 pt-6 border-t border-t-gray-600 group">

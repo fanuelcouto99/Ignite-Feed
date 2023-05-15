@@ -15,9 +15,6 @@ const posts = [
       { type: 'paragraph', content: 'Fala galeraa 👋' },
       { type: 'paragraph', content: 'Acabei  de subir mais um projeto no meu portifólio.É um projeto que fiz no Ignite, evento da RocketSeat.o nome do projeto é Ignite Feed! 🚀' },
       { type: 'link', content: 'https://github.com/fanuelcouto99' },
-      { type: 'link', content: '#novoprojeto' },
-      { type: 'link', content: '#ignite' },
-      { type: 'link', content: '#rocketseat' },
     ],
     publisedAt: new Date('2023-05-14 10:03:00')
   },
@@ -32,9 +29,6 @@ const posts = [
       { type: 'paragraph', content: 'Fala galeraa 👋' },
       { type: 'paragraph', content: 'Acabei  de subir mais um projeto no meu portifólio. É um projeto que fiz no NLW Copa, evento da RocketSeat.o nome do projeto é Copa! 🚀' },
       { type: 'link', content: 'https://github.com/trajano177' },
-      { type: 'link', content: '#novoprojeto' },
-      { type: 'link', content: '#nlwcopa' },
-      { type: 'link', content: '#rocketseat' },
     ],
     publisedAt: new Date('2023-05-12 20:03:00')
   },

@@ -2,6 +2,7 @@ import { format, formatDistanceToNow } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
+import { FormEvent } from 'react';
 
 interface PostProps {
     author: {
@@ -24,6 +25,11 @@ export function Post({ author, content, publisedAt }: PostProps) {
 
     const publishedDateFormatted = format(publisedAt, "dd 'de' LLLL 'às' HH:mm'h'", { locale: ptBR });
     const publishedDateRelativeToNow = formatDistanceToNow(publisedAt, { locale: ptBR, addSuffix: true });
+
+    function handleCreateNewComment(event: FormEvent) {
+        event.preventDefault();
+        console.log('shazam')
+    };
 
     return (
         <article className="post bg-gray-800 rounded-lg p-10">
@@ -66,7 +72,7 @@ export function Post({ author, content, publisedAt }: PostProps) {
                 })}
             </div>
 
-            <form className="w-full mt-6 pt-6 border-t border-t-gray-600 group">
+            <form onSubmit={handleCreateNewComment} className="w-full mt-6 pt-6 border-t border-t-gray-600 group">
                 <strong className="leading-6 text-gray-100">
                     Deixe seu feedback
                 </strong>

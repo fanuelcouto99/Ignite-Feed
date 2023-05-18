@@ -1,7 +1,11 @@
 import { ThumbsUp, Trash } from "@phosphor-icons/react";
 import { Avatar } from "./Avatar";
 
-export function Comment() {
+interface CommentProps {
+    content: string;
+};
+
+export function Comment({ content }: CommentProps) {
     return (
         <div className="mt-6 flex gap-4">
             <Avatar hasBorder={false} src="https://github.com/trajano177.png" />
@@ -36,7 +40,7 @@ export function Comment() {
 
                 <footer className="mt-4 rounded-sm">
                     <button className="text-gray-400 flex items-center hover:text-green-300">
-                        <ThumbsUp className="mr-2"/>
+                        <ThumbsUp className="mr-2" />
                         Aplaudir <span className="before:px-1 before:content-['\2022']">20</span>
                     </button>
                 </footer>

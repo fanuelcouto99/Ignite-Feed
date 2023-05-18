@@ -18,7 +18,7 @@ interface PostProps {
 };
 
 export function Post({ author, content, publisedAt }: PostProps) {
-    const [comments, setComments] = useState([1,2]);
+    const [comments, setComments] = useState(['Post muito legal! Gostei!']);
 
     const publishedDateFormatted = format(publisedAt, "dd 'de' LLLL 'às' HH:mm'h'", { locale: ptBR });
     const publishedDateRelativeToNow = formatDistanceToNow(publisedAt, { locale: ptBR, addSuffix: true });
@@ -91,7 +91,7 @@ export function Post({ author, content, publisedAt }: PostProps) {
             <div className="mt-8">
                 {comments.map((comment, index) => {
                     return (
-                        <Comment key={index}/>
+                        <Comment key={index} content={comment}/>
                     )
                 })}
             </div>

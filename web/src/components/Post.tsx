@@ -19,6 +19,7 @@ interface PostProps {
 
 export function Post({ author, content, publisedAt }: PostProps) {
     const [comments, setComments] = useState(['Post muito legal! Gostei!']);
+    const []
 
     const publishedDateFormatted = format(publisedAt, "dd 'de' LLLL 'às' HH:mm'h'", { locale: ptBR });
     const publishedDateRelativeToNow = formatDistanceToNow(publisedAt, { locale: ptBR, addSuffix: true });

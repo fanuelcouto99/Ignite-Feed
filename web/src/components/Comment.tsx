@@ -34,7 +34,7 @@ export function Comment({ content }: CommentProps) {
                     </header>
 
                     <p className="mt-4 text-gray-300">
-                        Muito bom Fanuel, parabéns!!! 👏👏
+                        {content}
                     </p>
                 </div>
 

@@ -3,13 +3,13 @@ import { Avatar } from "./Avatar";
 
 interface CommentProps {
     content: string;
-    deleteComment: (comment: string) => void;
+    onDeleteComment: (comment: string) => void;
 };
 
-export function Comment({ content, deleteComment }: CommentProps) {
+export function Comment({ content, onDeleteComment }: CommentProps) {
 
     function handleDeleteComment() {
-        deleteComment(content);
+        onDeleteComment(content);
     };
 
     return (

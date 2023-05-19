@@ -99,7 +99,7 @@ export function Post({ author, content, publisedAt }: PostProps) {
             <div className="mt-8">
                 {comments.map((comment, index) => {
                     return (
-                        <Comment key={index} content={comment} deleteComment={deleteComment}/>
+                        <Comment key={index} content={comment} onDeleteComment={deleteComment}/>
                     )
                 })}
             </div>

@@ -19,14 +19,15 @@ interface PostProps {
 
 export function Post({ author, content, publisedAt }: PostProps) {
     const [comments, setComments] = useState(['Post muito legal! Gostei!']);
-    const []
+    const [newComment, setNewComment] = useState('');
 
     const publishedDateFormatted = format(publisedAt, "dd 'de' LLLL 'às' HH:mm'h'", { locale: ptBR });
     const publishedDateRelativeToNow = formatDistanceToNow(publisedAt, { locale: ptBR, addSuffix: true });
 
     function handleCreateNewComment(event: FormEvent) {
         event.preventDefault();
-        setComments([...comments, comments.length + 1]);
+        setComments([...comments, newComment]);
+        setNewComment('');
     };
 
     return (
@@ -76,6 +77,8 @@ export function Post({ author, content, publisedAt }: PostProps) {
                 </strong>
 
                 <textarea
+                    value={newComment}
+                    onChange={event => setNewComment(event.target.value)}
                     placeholder="Deixe um comentário"
                     className="w-full h-24 p-4 rounded-lg bg-gray-900 border-none resize-none text-gray-100 leading-4 mt-4"
                 />

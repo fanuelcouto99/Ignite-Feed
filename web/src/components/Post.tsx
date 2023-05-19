@@ -30,6 +30,10 @@ export function Post({ author, content, publisedAt }: PostProps) {
         setNewComment('');
     };
 
+    function deleteComment(comment: string) {
+        alert(`deletar ${comment}`)
+    };
+
     return (
         <article className="post bg-gray-800 rounded-lg p-10">
             <header className="flex items-center justify-between">
@@ -95,7 +99,7 @@ export function Post({ author, content, publisedAt }: PostProps) {
             <div className="mt-8">
                 {comments.map((comment, index) => {
                     return (
-                        <Comment key={index} content={comment}/>
+                        <Comment key={index} content={comment} deleteComment={deleteComment}/>
                     )
                 })}
             </div>

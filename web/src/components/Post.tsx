@@ -88,12 +88,14 @@ export function Post({ author, content, publisedAt }: PostProps) {
                     onChange={event => setNewComment(event.target.value)}
                     placeholder="Deixe um comentário"
                     className="w-full h-24 p-4 rounded-lg bg-gray-900 border-none resize-none text-gray-100 leading-4 mt-4"
+                    required
                 />
 
                 <footer className="invisible max-h-0 group-focus-within:visible group-focus-within:max-h-none">
                     <button
                         type="submit"
-                        className="py-4 px-6 mt-4 rounded-lg border-none bg-green-500 text-white font-bold cursor-pointer hover:bg-green-300 transition-colors duration-100">
+                        disabled={newComment.length === 0}
+                        className="py-4 px-6 mt-4 rounded-lg border-none bg-green-500 text-white font-bold cursor-pointer enabled:hover:bg-green-300 transition-colors duration-100 disabled:opacity-70 disabled:cursor-not-allowed">
                         Publicar
                     </button>
                 </footer>

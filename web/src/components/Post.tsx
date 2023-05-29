@@ -2,7 +2,7 @@ import { format, formatDistanceToNow } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
-import { FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 
 interface PostProps {
     author: {
@@ -35,6 +35,10 @@ export function Post({ author, content, publisedAt }: PostProps) {
             return comment !== commentToDelete;
         });
         setComments(commentsWithoutDeleteOne);
+    };
+
+    function handleNewCommentInvalid(event: ChangeEvent<HTMLTextAreaElement>) {
+        event.target.setCustomValidity("Essa porra é obrigatória");
     };
 
     return (
@@ -88,6 +92,8 @@ export function Post({ author, content, publisedAt }: PostProps) {
                     onChange={event => setNewComment(event.target.value)}
                     placeholder="Deixe um comentário"
                     className="w-full h-24 p-4 rounded-lg bg-gray-900 border-none resize-none text-gray-100 leading-4 mt-4"
+                    onInvalid={handleNewCommentInvalid}
+                    required
                 />
 
                 <footer className="invisible max-h-0 group-focus-within:visible group-focus-within:max-h-none">

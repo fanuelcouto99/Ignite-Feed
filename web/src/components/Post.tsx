@@ -37,6 +37,10 @@ export function Post({ author, content, publisedAt }: PostProps) {
         setComments(commentsWithoutDeleteOne);
     };
 
+    function handleNewCommentInvalid(event: ChangeEvent<HTMLTextAreaElement>) {
+        event.target.setCustomValidity('Esse campo é obrigatório!')
+    };
+
     const isNewCommentEmpty = newComment.length === 0;
 
     return (

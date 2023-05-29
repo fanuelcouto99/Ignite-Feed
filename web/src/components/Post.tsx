@@ -37,9 +37,7 @@ export function Post({ author, content, publisedAt }: PostProps) {
         setComments(commentsWithoutDeleteOne);
     };
 
-    function handleNewCommentInvalid(event: ChangeEvent<HTMLTextAreaElement>) {
-        event.target.setCustomValidity("Essa porra é obrigatória");
-    };
+    const isNewCommentEmpty = newComment.length === 0;
 
     return (
         <article className="post bg-gray-800 rounded-lg p-10">
@@ -99,7 +97,8 @@ export function Post({ author, content, publisedAt }: PostProps) {
                 <footer className="invisible max-h-0 group-focus-within:visible group-focus-within:max-h-none">
                     <button
                         type="submit"
-                        className="py-4 px-6 mt-4 rounded-lg border-none bg-green-500 text-white font-bold cursor-pointer hover:bg-green-300 transition-colors duration-100">
+                        disabled={isNewCommentEmpty}
+                        className="py-4 px-6 mt-4 rounded-lg border-none bg-green-500 text-white font-bold cursor-pointer enabled:hover:bg-green-300 transition-colors duration-100 disabled:opacity-70 disabled:cursor-not-allowed">
                         Publicar
                     </button>
                 </footer>

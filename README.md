@@ -3,7 +3,7 @@
 Primeira aplicação desenvolvida com o Ignite, bootcamp da Rocketseat para acelear aprendizado das principais tecnologias do mercado.
 
 <p align="center">
-   <img src="https://github.com/fanuelcouto99/habits/blob/main/img/logo.svg" width="300">
+   <img src="https://github.com/fanuelcouto99/Ignite-Feed/blob/main/img/logo.png" width="300">
 </p>
 
 <hr>
@@ -21,36 +21,19 @@ Primeira aplicação desenvolvida com o Ignite, bootcamp da Rocketseat para acel
 <p>O projeto inicial orientado no Ignite, foi criado com JavaScript, e para estilização foi usado CSS Modules, porém para esse projeto foi utilizado o TypeScript na aplicação com React e para a parte de estilização foi usado o TailwindCSS.</p> 
 
 <p align="center">
-   <img src="https://github.com/fanuelcouto99/habits/blob/main/img/main.png">
+   <img src="https://github.com/fanuelcouto99/Ignite-Feed/blob/main/img/main.png">
 </p>
 
-<p align="center">
-   <img src="https://github.com/fanuelcouto99/habits/blob/main/img/detail.png">
-</p>
-
-<p align="center">
-   <img src="https://github.com/fanuelcouto99/habits/blob/main/img/new.png">
-</p>
 
 ### :pencil: **Como usar na web**
 
-Navegando pela tela principal e acessando os hábitos já criados para atualização de status.
-
-<p align="center">
-   <img src="https://github.com/fanuelcouto99/habits/blob/main/img/navigate-main.gif">
-</p>
-
-Criando um novo hábito.
-
-<p align="center">
-   <img src="https://github.com/fanuelcouto99/habits/blob/main/img/new-habit.gif">
-</p>
+Para poder fazer uma demonstração do projeto, basta acessar o link: [Vercel](https://ignite-feed-rhxl5c3pl-fanuelcouto99.vercel.app/)
 
 <hr>
 
 ### :rocket: **Executando o projeto**
 
-<p>Primeiramente é preciso instalar as dependências necessárias para o projeto, para isso basta acessar as pastas server e web pelo terminal, e em ambas, executar o install.</p>
+<p>Primeiramente é preciso instalar as dependências necessárias para o projeto, para isso basta acessar a pasta web pelo terminal, executar o install.</p>
 
 ```bash
   npm install
